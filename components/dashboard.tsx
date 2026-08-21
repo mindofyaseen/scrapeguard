@@ -21,8 +21,8 @@ const stateCopy: Record<PipelineState, { label: string; eyebrow: string; detail:
   },
   repairing: {
     label: "Repairing",
-    eyebrow: "Bright Data Self-Healing",
-    detail: "The collector is being refactored against the same stable output contract.",
+    eyebrow: "Self-Healing evidence replay",
+    detail: "Replaying the reviewed Bright Data repair against the same stable output contract.",
   },
   recovered: {
     label: "Recovered",
@@ -112,7 +112,7 @@ export function Dashboard() {
               </button>
             ) : state === "degraded" ? (
               <button className="button button-danger" onClick={repair}>
-                <Wand /> Heal with Bright Data
+                <Wand /> Replay verified repair
               </button>
             ) : (
               <button className="button button-primary" disabled>
@@ -232,7 +232,7 @@ function Evidence({ state, onRepair }: { state: PipelineState; onRepair: () => v
           <div><Wand /><strong>Evidence-bound repair prompt</strong><span>894 / 1000 chars</span></div>
           <p>Deadline completeness fell from 100% to 0%. The value moved under the label “Applications close” at <code>[data-field=&quot;closing-date&quot;]</code>. Preserve every existing output field name and type. Fix deadline extraction only.</p>
         </div>
-        {state === "degraded" && <button className="button button-danger full" onClick={onRepair}><Wand /> Start Self-Healing</button>}
+        {state === "degraded" && <button className="button button-danger full" onClick={onRepair}><Wand /> Replay verified Self-Healing</button>}
       </section>
 
       <section className="panel canary-panel">
