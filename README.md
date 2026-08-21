@@ -96,6 +96,7 @@ More detailed diagrams and failure-state design are in [ARCHITECTURE_PLAN.md](./
 - `lib/validation.ts` — deterministic promotion policy
 - `examples/opportunities.sample.json` — example structured output required for judging
 - `BRIGHT_DATA_LEARNING_GUIDE.md` — tool-learning path and CLI workflow
+- `BRIGHT_DATA_EVIDENCE.md` — real Collector ID, failure, repair and final canary results
 - `JUDGING_AND_DEMO_PLAYBOOK.md` — track strategy and three-minute demo plan
 - `SUBMISSION_CHECKLIST.md` — remaining evidence and submission tasks
 

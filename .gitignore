@@ -10,3 +10,5 @@ coverage/
 bright-data-output/
 .pnpm-store/
 *.tsbuildinfo
+
+.vercel

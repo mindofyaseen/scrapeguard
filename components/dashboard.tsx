@@ -17,7 +17,7 @@ const stateCopy: Record<PipelineState, { label: string; eyebrow: string; detail:
   degraded: {
     label: "Degraded",
     eyebrow: "Layout change detected",
-    detail: "Deadline completeness collapsed after the source moved its application panel.",
+    detail: "The redesigned card selector returned zero records even though the page still held four.",
   },
   repairing: {
     label: "Repairing",
@@ -90,7 +90,7 @@ export function Dashboard() {
           <span className={`status-dot ${state}`} />
           <span>{stateCopy[state].label}</span>
           <span className="separator">/</span>
-          <code>c_pending</code>
+          <code>c_mt2azieh279l3xt9lt</code>
         </div>
         <a className="github-link" href="https://github.com/mindofyaseen/scrapeguard" target="_blank" rel="noreferrer">
           GitHub <ArrowUpRight />
@@ -136,8 +136,8 @@ export function Dashboard() {
           <p>{stateCopy[state].detail}</p>
           <div className="metric-row">
             <Metric label="Records" value={state === "degraded" ? "0 / 4" : "4 / 4"} />
-            <Metric label="Critical fields" value={state === "degraded" ? "67%" : "100%"} />
-            <Metric label="Recovery" value={state === "recovered" ? "2m 41s" : "—"} />
+            <Metric label="Critical fields" value={state === "degraded" ? "0%" : "100%"} />
+            <Metric label="Recovery" value={state === "recovered" ? "≈7 min" : "—"} />
           </div>
           <div className="run-track" aria-label="Pipeline stages">
             {[
@@ -298,10 +298,10 @@ function HealthRing({ score }: { score: number }) {
 function Metric({ label, value }: { label: string; value: string }) { return <div><span>{label}</span><strong>{value}</strong></div>; }
 
 function terminalCopy(state: PipelineState) {
-  if (state === "healthy") return `$ bdata scraper run c_pending https://…/lab?layout=classic --pretty\n\n✓ Collector completed · 4 records\n✓ Contract score · 100/100\n✓ Snapshot persisted · source provenance intact`;
-  if (state === "degraded") return `$ bdata scraper run c_pending https://…/lab?layout=shifted --pretty\n\n⚠ 4 records rejected by output schema\n✕ deadline · expected ISO date, received undefined\n✕ Health score · 0/100\n→ Incident SG-0042 opened · last-known-good retained`;
-  if (state === "repairing") return `$ bdata scraper heal c_pending "Fix deadline extraction…"\n\n◌ collector_maintainer · running\n◌ code_generator · polling\n◌ preview_runner · waiting\n\nSame Collector ID · downstream contract locked`;
-  return `$ bdata scraper run c_pending https://…/lab?layout=shifted --pretty\n\n✓ Candidate preview · 4 / 4 records\n✓ Canary contract · 100/100\n✓ Same Collector ID · c_pending\n✓ Failed inputs replayed · incident recovered`;
+  if (state === "healthy") return `$ bdata scraper run c_mt2azieh279l3xt9lt https://…/lab?layout=classic --pretty\n\n✓ Collector completed · 4 records\n✓ Contract score · 100/100\n✓ Snapshot persisted · source provenance intact`;
+  if (state === "degraded") return `$ bdata scraper run c_mt2azieh279l3xt9lt https://…/lab?layout=shifted --pretty\n\n⚠ Run completed with 0 records\n✕ Volume baseline · expected 4, received 0\n✕ Health score · 0/100\n→ Incident SG-0042 opened · last-known-good retained`;
+  if (state === "repairing") return `$ bdata scraper heal c_mt2azieh279l3xt9lt "Fix deadline extraction…"\n\n◌ collector_maintainer · running\n◌ code_generator · polling\n◌ preview_runner · waiting\n\nSame Collector ID · downstream contract locked`;
+  return `$ bdata scraper run c_mt2azieh279l3xt9lt https://…/lab?layout=shifted --pretty\n\n✓ Candidate preview · 4 / 4 records\n✓ Canary contract · 100/100\n✓ Same Collector ID · c_mt2azieh279l3xt9lt\n✓ Failed inputs replayed · incident recovered`;
 }
 
 function formatDate(value: string) { return new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" }).format(new Date(value)); }
