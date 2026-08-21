@@ -26,6 +26,7 @@ The `/lab` route is a deterministic public failure fixture. Layout A exposes `.o
 ## Product tour
 
 - **Command center** — weighted health contract and coding-agent terminal evidence.
+- **3D contract core** — dependency-free, state-aware schema/volume/freshness visualization with pointer parallax and reduced-motion support.
 - **ChanceMesh feed** — searchable, filterable downstream product powered by the stable schema.
 - **Repair evidence** — before/after selector diff, bounded repair prompt and canary promotion gates.
 - **Public fixture** — `/lab?layout=classic` and `/lab?layout=shifted` create a repeatable break/fix story.
