@@ -2,6 +2,7 @@
 
 import { useMemo, useRef, useState } from "react";
 import { ContractCore } from "@/components/contract-core";
+import { StorySections } from "@/components/story-sections";
 import {
   Alert,
   ArrowRight,
@@ -203,6 +204,8 @@ export function Dashboard() {
         )}
         {view === "evidence" && <Evidence state={state} onRepair={repair} />}
       </section>
+
+      <StorySections />
 
       <section className="principles">
         <div><Shield /><strong>AI proposes. Contracts decide.</strong><span>No repair promotes itself.</span></div>

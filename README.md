@@ -30,6 +30,8 @@ The `/lab` route is a deterministic public failure fixture. Layout A exposes `.o
 - **ChanceMesh feed** — searchable, filterable downstream product powered by the stable schema.
 - **Repair evidence** — before/after selector diff, bounded repair prompt and canary promotion gates.
 - **Public fixture** — `/lab?layout=classic` and `/lab?layout=shifted` create a repeatable break/fix story.
+- **Visual failure lab** — full Layout A/B mockups, the real `4 → 0 → 4` recovery rail and rejected-candidate story.
+- **Judge-ready narrative** — verification receipt, system architecture and dedicated proof for all three prize tracks.
 
 ## Stack
 
