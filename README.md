@@ -1,10 +1,14 @@
 # ScrapeGuard
 
+[![Quality gates](https://github.com/mindofyaseen/scrapeguard/actions/workflows/ci.yml/badge.svg)](https://github.com/mindofyaseen/scrapeguard/actions/workflows/ci.yml)
+
 > The web changes. Your data contract should not.
 
 ScrapeGuard is a reliability layer for custom Bright Data Scraper Studio collectors. It detects silent extraction failures, preserves the last-known-good dataset, sends evidence to the Self-Healing workflow, and promotes a repair only after deterministic canary checks pass. ChanceMesh is the downstream opportunity feed that proves the recovered structured data remains useful.
 
 Built during **WeMakeDevs × Bright Data: Into the Scrape-Verse**, 17–23 August 2026.
+
+**Live demo:** https://scrapeguard-eight.vercel.app
 
 ## Why it matters
 
@@ -43,7 +47,7 @@ pnpm install
 pnpm dev
 ```
 
-Open `http://localhost:3000`. Use **Simulate layout change**, inspect the incident, and run the repair demo.
+Open `http://localhost:3000`. Use **Simulate layout change**, inspect the incident, and run the repair demo. The same flow is available on the [public deployment](https://scrapeguard-eight.vercel.app).
 
 For a server-side Bright Data run, copy `.env.example` to `.env.local` and set:
 
@@ -90,6 +94,7 @@ More detailed diagrams and failure-state design are in [ARCHITECTURE_PLAN.md](./
 - `components/dashboard.tsx` — interactive product state machine
 - `lib/opportunity.ts` — canonical structured-output schema
 - `lib/validation.ts` — deterministic promotion policy
+- `examples/opportunities.sample.json` — example structured output required for judging
 - `BRIGHT_DATA_LEARNING_GUIDE.md` — tool-learning path and CLI workflow
 - `JUDGING_AND_DEMO_PLAYBOOK.md` — track strategy and three-minute demo plan
 - `SUBMISSION_CHECKLIST.md` — remaining evidence and submission tasks

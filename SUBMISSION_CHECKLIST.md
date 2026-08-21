@@ -14,7 +14,7 @@ Deadline: **23 August 2026, 8:00 p.m. BST** — **24 August 2026, 12:00 a.m. PKT
 - [ ] Real Scraper Studio Collector ID (`c_…`) in the repo evidence
 - [ ] Saved baseline and shifted-layout CLI outputs
 - [ ] Accepted Self-Healing diff or clearly documented repair run
-- [ ] Public deployment URL
+- [x] Public deployment URL — https://scrapeguard-eight.vercel.app
 - [ ] Demo video, maximum three minutes
 - [ ] Final Google Form submission
 

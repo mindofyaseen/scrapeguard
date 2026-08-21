@@ -1,8 +1,8 @@
 # Bright Data Scraper Studio Learning Guide
 
-Purpose: learn the sponsor platform deeply before the event without implementing the competition project.
+Purpose: learn the sponsor platform deeply enough to build, debug and explain the competition project without guessing.
 
-Do not reuse a pre-event practice collector, its generated code, or its output in the submission. Create the competition collector only after the official start.
+The hackathon is active. Use this guide alongside the actual ScrapeGuard collector and save useful CLI output for the demo. Do not publish tokens, cookies, account IDs or other credentials.
 
 ## 1. Mental model
 
@@ -90,12 +90,12 @@ Important wording:
 
 Do not claim that Codex itself is Scraper Studio's self-healing engine.
 
-Safe practice before the event:
+Safe practice:
 
 - Run the CLI version command.
 - Complete login/account verification if desired.
-- Follow an unrelated tutorial target such as Hacker News only for learning.
-- Delete or clearly label the practice collector and never reuse it in the submission.
+- Create the competition collector against the public ScrapeGuard fixture or an approved public opportunity page.
+- Keep practice collectors clearly labelled so the submission evidence points to the correct `c_…` ID.
 
 ### Module 3 - Interaction and parser code
 
@@ -315,24 +315,23 @@ WARC/snapshot evidence can help answer:
 
 Use WARC only where supported and cost/time appropriate. The MVP does not depend on it.
 
-## 4. Two-day pre-event study plan
+## 4. Accelerated study plan
 
-### Study Day A (3-4 hours)
+### Block A (90 minutes)
 
-1. Introduction and FAQ - 30 minutes.
-2. CLI guide and coding-agent prompts - 45 minutes.
-3. Basics, interaction/parser concepts - 60 minutes.
-4. Worker types and stages - 45 minutes.
-5. Explain the whole collector lifecycle aloud without notes - 15 minutes.
+1. Introduction and FAQ — 15 minutes.
+2. CLI guide and coding-agent prompts — 20 minutes.
+3. Basics, interaction/parser concepts — 25 minutes.
+4. Worker types, stages and schemas — 20 minutes.
+5. Explain the collector lifecycle aloud without notes — 10 minutes.
 
-### Study Day B (3-4 hours)
+### Block B (90 minutes)
 
-1. Schemas and validation - 60 minutes.
-2. Best practices and error codes - 45 minutes.
-3. Collection API - 45 minutes.
-4. Self-Healing API - 45 minutes.
-5. Limits, retention, and WARC - 30 minutes.
-6. Practice judge Q&A - 15 minutes.
+1. Validation, best practices and error codes — 25 minutes.
+2. Collection API — 20 minutes.
+3. Self-Healing API — 25 minutes.
+4. Limits, retention and WARC — 10 minutes.
+5. Practice judge Q&A — 10 minutes.
 
 ## 5. Readiness exam
 

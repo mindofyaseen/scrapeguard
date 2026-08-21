@@ -1,0 +1,17 @@
+[
+  {
+    "id": "wmd-scrape-verse",
+    "title": "Into the Scrape-Verse",
+    "provider": "WeMakeDevs × Bright Data",
+    "summary": "Build a self-healing web scraper and turn reliable public web data into a useful product.",
+    "opportunity_type": "hackathon",
+    "deadline": "2026-08-23T19:00:00.000Z",
+    "location": "Online",
+    "remote": true,
+    "amount_text": "$15,000 in prizes",
+    "eligibility": ["Developers worldwide", "Solo or teams up to four"],
+    "tags": ["Web scraping", "AI", "Bright Data"],
+    "source_url": "https://www.wemakedevs.org/hackathons/scrape-verse",
+    "collected_at": "2026-08-21T10:30:00.000Z"
+  }
+]
